@@ -21,7 +21,7 @@ fi
 rm /tmp/map-gen-settings.json
 rm /tmp/server-settings.json
 
-saveFile="/saves/$FACTORIO_SAVE"
+saveFile="/saves/$FACTORIO_SAVE_NAME.zip"
 if [[ ! -f $saveFile ]]; then
     factorio --create $saveFile --map-gen-settings $mapGenSettings
 fi
