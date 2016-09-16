@@ -1,10 +1,10 @@
 # Factorio Docker
 
-[Factorio][0] headless server - v0.13.20
+[Factorio][0] headless server - v0.14.7
 
 ## Usage
 
-###Quickstart
+### Quickstart
 
 ```
 docker run -d --name factorio -p 34197:34197/udp rfvgyhn/factorio
@@ -33,7 +33,7 @@ the var isn't specified.
 * `FACTORIO_SAVE=meeseeks.zip` the name of the save file in `/saves`
 * `FACTORIO_AUTOSAVE_INTERVAL=2` server autosave interval in minutes
 * `FACTORIO_AUTOSAVE_SLOTS=3` number of autosave files to keep
-* `FACTORIO_LATENCY_MS=100` multiplayer server latency in milliseconds
+* `FACTORIO_AFK_AUTOKICK_INTERVAL=0` interval after which to auto-kick players
 * `FACTORIO_ALLOW_COMMANDS=false` allow (true), disallow (false) or restrict (admins-only) use of the command console. Note that running almost any console command will disable achievements.
 * `FACTORIO_AUTO_PAUSE=true` pause the server when no players are on.
 
