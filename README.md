@@ -30,7 +30,7 @@ docker run -d --name factorio \
 The following environment variables are available. The values shown the defaults used if
 the var isn't specified.
 
-* `FACTORIO_SAVE=meeseeks.zip` the name of the save file in `/saves`
+* `FACTORIO_SAVE_NAME=meeseeks` the name of the save file in `/saves`
 * `FACTORIO_AUTOSAVE_INTERVAL=2` server autosave interval in minutes
 * `FACTORIO_AUTOSAVE_SLOTS=3` number of autosave files to keep
 * `FACTORIO_AFK_AUTOKICK_INTERVAL=0` interval after which to auto-kick players
@@ -43,7 +43,7 @@ docker run -d --name factorio \
    -v /host/path/saves:/saves \
    -v /host/path/mods:/mods \
    -v /host/path/config:/config \
-   -e FACTORIO_SAVE=rick.zip \
+   -e FACTORIO_SAVE_NAME=rick \
    -e FACTORIO_ALLOW_COMMANDS=true \
    rfvgyhn/factorio
 ```
