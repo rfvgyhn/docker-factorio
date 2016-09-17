@@ -7,8 +7,9 @@ ENTRYPOINT ["/sbin/tini", "--"]
 
 ENV VERSION=0.14.7
 RUN apk --no-cache add curl pwgen && \
-    mkdir -p /opt && \
+    mkdir -p /opt /saves && \
     curl -LSs https://www.factorio.com/get-download/${VERSION}/headless/linux64 | tar -xzC /opt && \
+    ln -s /saves /opt/factorio/saves && \
     apk --no-cache del curl
 
 COPY files /
