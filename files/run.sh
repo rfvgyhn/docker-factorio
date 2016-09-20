@@ -10,16 +10,13 @@ fi
 
 mapGenSettings="/config/map-gen-settings.json"
 if [[ ! -f $mapGenSettings ]]; then
-    cp /tmp/map-gen-settings.json $mapGenSettings
+    mv /tmp/map-gen-settings.json $mapGenSettings
 fi
 
 serverSettings="/config/server-settings.json"
 if [[ ! -f $serverSettings ]]; then
-    cp /tmp/server-settings.json $serverSettings
+    mv /tmp/server-settings.json $serverSettings
 fi
-
-rm /tmp/map-gen-settings.json
-rm /tmp/server-settings.json
 
 saveFile="/saves/$FACTORIO_SAVE_NAME.zip"
 if [[ ! -f $saveFile ]]; then
