@@ -21,5 +21,10 @@
   "_comment_verify_user_identity": "When set to true, the server will only allow clients that have a valid Factorio.com account",
   "verify_user_identity": true,
   "_commend_max_upload_in_kilobytes_per_second" : "optional, default value is 0. 0 means unlimited.",
-  "max_upload_in_kilobytes_per_second": 0
+  "max_upload_in_kilobytes_per_second": 0,
+  
+  "_comment_ignore_player_limit_for_returning_players": "Players that played on this map already can join even when the max player limit was reached.",
+  "ignore_player_limit_for_returning_players": false,
+
+  "only_admins_can_pause_the_game": true
 }
