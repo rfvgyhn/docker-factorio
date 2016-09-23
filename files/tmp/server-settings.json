@@ -26,5 +26,8 @@
   "_comment_ignore_player_limit_for_returning_players": "Players that played on this map already can join even when the max player limit was reached.",
   "ignore_player_limit_for_returning_players": false,
 
-  "only_admins_can_pause_the_game": true
+  "only_admins_can_pause_the_game": true,
+  
+  "_comment_admins": "List of case sensitive usernames, that will be promoted immediately",
+  "admins": []
 }
