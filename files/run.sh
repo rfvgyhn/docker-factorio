@@ -24,17 +24,9 @@ if [[ ! -f $saveFile ]]; then
 fi
 
 params="--start-server $saveFile"
-params="$params --autosave-interval ${FACTORIO_AUTOSAVE_INTERVAL}"
-params="$params --autosave-slots ${FACTORIO_AUTOSAVE_SLOTS}"
-params="$params --afk-autokick-interval ${FACTORIO_AFK_AUTOKICK_INTERVAL}"
-params="$params --allow-commands ${FACTORIO_ALLOW_COMMANDS}"
 params="$params --mod-directory /mods"
 params="$params --rcon-password $password"
 params="$params --rcon-port 27015"
 params="$params --server-settings $serverSettings"
-
-if ! echo "$FACTORIO_AUTO_PAUSE" | grep -iq true; then
-    params="$params --no-auto-pause"
-fi
 
 exec factorio $params

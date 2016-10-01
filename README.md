@@ -1,6 +1,6 @@
 # Factorio Docker
 
-[Factorio][0] headless server - v0.14.11-experimental
+[Factorio][0] headless server - v0.14.12-experimental
 
 ## Usage
 
@@ -27,15 +27,10 @@ docker run -d --name factorio \
 
 ### Options
 
-The following environment variables are available. The values shown the defaults used if
+The following environment variables are available. The values show the defaults used if
 the var isn't specified.
 
 * `FACTORIO_SAVE_NAME=meeseeks` the name of the save file in `/saves`
-* `FACTORIO_AUTOSAVE_INTERVAL=2` server autosave interval in minutes
-* `FACTORIO_AUTOSAVE_SLOTS=3` number of autosave files to keep
-* `FACTORIO_AFK_AUTOKICK_INTERVAL=0` interval after which to auto-kick players
-* `FACTORIO_ALLOW_COMMANDS=false` allow (true), disallow (false) or restrict (admins-only) use of the command console. Note that running almost any console command will disable achievements.
-* `FACTORIO_AUTO_PAUSE=true` pause the server when no players are on.
 
 ```
 docker run -d --name factorio \
@@ -44,14 +39,14 @@ docker run -d --name factorio \
    -v /host/path/mods:/mods \
    -v /host/path/config:/config \
    -e FACTORIO_SAVE_NAME=rick \
-   -e FACTORIO_ALLOW_COMMANDS=true \
    rfvgyhn/factorio
 ```
 
 ### Configuration
 
 You may specify `server-settings.json` and `map-gen-settings.json` by mounting the 
-`/config` volume.
+`/config` volume. Note that since [version 0.14.12][3], several of the options that were provided
+by environment variables have moved to `server-settings.json`.
 
 The RCON password is randomly generated and stored in `/config/rconpw`/
 
@@ -68,4 +63,4 @@ Each version will also have its own tag.
 [0]: https://www.factorio.com/
 [1]: https://www.factorio.com/download-headless/stable
 [2]: https://www.factorio.com/download-headless/experimental
-
+[3]: https://forums.factorio.com/viewtopic.php?f=3&t=33591
