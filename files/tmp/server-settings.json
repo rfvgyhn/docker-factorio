@@ -44,6 +44,9 @@
 
   "only_admins_can_pause_the_game": true,
   
+  "_comment_autosave_only_on_server": "Whether autosaves should be saved only on server or also on all connected clients. Default is true.",
+  "autosave_only_on_server": true,
+  
   "_comment_admins": "List of case sensitive usernames, that will be promoted immediately",
   "admins": []
 }
