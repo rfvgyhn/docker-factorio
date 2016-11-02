@@ -31,8 +31,8 @@ The following environment variables are available. The values show the defaults 
 the var isn't specified.
 
 * `FACTORIO_SAVE_NAME=meeseeks` the name of the save file in `/saves`
-* `FACTORIO_PORT=1234` network port to use
-* `FACTORIO_BIND_ADDRESS=123.123.123.123` IP address (and optionally port) to bind to (`address[:port]`)
+* `FACTORIO_PORT=` network port to use
+* `FACTORIO_BIND_ADDRESS=` IP address (and optionally port) to bind to (`address[:port]`)
 
 ```
 docker run -d --name factorio \
