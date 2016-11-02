@@ -31,6 +31,8 @@ The following environment variables are available. The values show the defaults 
 the var isn't specified.
 
 * `FACTORIO_SAVE_NAME=meeseeks` the name of the save file in `/saves`
+* `FACTORIO_PORT=1234` network port to use
+* `FACTORIO_BIND_ADDRESS=123.123.123.123` IP address (and optionally port) to bind to (`address[:port]`)
 
 ```
 docker run -d --name factorio \
@@ -48,7 +50,7 @@ You may specify `server-settings.json` and `map-gen-settings.json` by mounting t
 `/config` volume. Note that since [version 0.14.12][3], several of the options that were provided
 by environment variables have moved to `server-settings.json`.
 
-The RCON password is randomly generated and stored in `/config/rconpw`/
+The RCON password is randomly generated and stored in `/config/rconpw`
 
 ## Docker Images
 

@@ -28,5 +28,11 @@ params="$params --mod-directory /mods"
 params="$params --rcon-password $password"
 params="$params --rcon-port 27015"
 params="$params --server-settings $serverSettings"
+if [[ ! -z "$FACTORIO_PORT" ]]; then
+    params = "$params --port $FACTORIO_PORT"
+fi
+if [[ ! -z "$FACTORIO_BIND_ADDRESS" ]]; then
+    params = "$params --bind $FACTORIO_BIND_ADDRESS"
+fi
 
 exec factorio $params
