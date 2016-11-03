@@ -1,10 +1,10 @@
 # Factorio Docker
 
-[Factorio][0] headless server - v0.13.20
+[Factorio][0] headless server - v0.14.18-experimental
 
 ## Usage
 
-###Quickstart
+### Quickstart
 
 ```
 docker run -d --name factorio -p 34197:34197/udp rfvgyhn/factorio
@@ -27,15 +27,12 @@ docker run -d --name factorio \
 
 ### Options
 
-The following environment variables are available. The values shown the defaults used if
+The following environment variables are available. The values show the defaults used if
 the var isn't specified.
 
 * `FACTORIO_SAVE_NAME=meeseeks` the name of the save file in `/saves`
-* `FACTORIO_AUTOSAVE_INTERVAL=2` server autosave interval in minutes
-* `FACTORIO_AUTOSAVE_SLOTS=3` number of autosave files to keep
-* `FACTORIO_LATENCY_MS=100` multiplayer server latency in milliseconds
-* `FACTORIO_ALLOW_COMMANDS=false` allow (true), disallow (false) or restrict (admins-only) use of the command console. Note that running almost any console command will disable achievements.
-* `FACTORIO_AUTO_PAUSE=true` pause the server when no players are on.
+* `FACTORIO_PORT=` network port to use
+* `FACTORIO_BIND_ADDRESS=` IP address (and optionally port) to bind to (`address[:port]`)
 
 ```
 docker run -d --name factorio \
@@ -44,16 +41,16 @@ docker run -d --name factorio \
    -v /host/path/mods:/mods \
    -v /host/path/config:/config \
    -e FACTORIO_SAVE_NAME=rick \
-   -e FACTORIO_ALLOW_COMMANDS=true \
    rfvgyhn/factorio
 ```
 
 ### Configuration
 
 You may specify `server-settings.json` and `map-gen-settings.json` by mounting the 
-`/config` volume.
+`/config` volume. Note that since [version 0.14.12][3], several of the options that were provided
+by environment variables have moved to `server-settings.json`.
 
-The RCON password is randomly generated and stored in `/config/rconpw`/
+The RCON password is randomly generated and stored in `/config/rconpw`
 
 ## Docker Images
 
@@ -68,4 +65,4 @@ Each version will also have its own tag.
 [0]: https://www.factorio.com/
 [1]: https://www.factorio.com/download-headless/stable
 [2]: https://www.factorio.com/download-headless/experimental
-
+[3]: https://forums.factorio.com/viewtopic.php?f=3&t=33591
