@@ -8,7 +8,7 @@ ENTRYPOINT ["/sbin/tini", "--"]
 ENV VERSION=0.15.0
 RUN apk --no-cache add curl pwgen
 RUN mkdir -p /opt /saves
-RUN curl -LSs https://www.factorio.com/get-download/${VERSION}/headless/linux64 | tar -xzC /opt
+RUN curl -LSs https://www.factorio.com/get-download/${VERSION}/headless/linux64 | tar -xJC /opt
 RUN ln -s /saves /opt/factorio/saves
 RUN apk --no-cache del curl
 
