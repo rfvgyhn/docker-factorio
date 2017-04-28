@@ -13,14 +13,24 @@ if [[ ! -f $mapGenSettings ]]; then
     mv /tmp/map-gen-settings.json $mapGenSettings
 fi
 
+mapSettings="/config/map-settings.json"
+if [[ ! -f $mapSettings ]]; then
+    mv /tmp/map-settings.json $mapSettings
+fi
+
 serverSettings="/config/server-settings.json"
 if [[ ! -f $serverSettings ]]; then
     mv /tmp/server-settings.json $serverSettings
 fi
 
+serverWhitelist="/config/server-whitelist.json"
+if [[ ! -f $serverWhitelist ]]; then
+    mv /tmp/server-whitelist.json $serverWhitelist
+fi
+
 saveFile="/saves/$FACTORIO_SAVE_NAME.zip"
 if [[ ! -f $saveFile ]]; then
-    factorio --create $saveFile --map-gen-settings $mapGenSettings
+    factorio --create $saveFile --map-gen-settings $mapGenSettings --map-settings $mapSettings
 fi
 
 params="--start-server $saveFile"
