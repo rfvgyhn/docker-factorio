@@ -46,8 +46,15 @@ docker run -d --name factorio \
 
 ### Configuration
 
-You may specify `server-settings.json` and `map-gen-settings.json` by mounting the 
-`/config` volume. Note that since [version 0.14.12][3], several of the options that were provided
+You may specify the following files by mounting the `/config` volume:
+
+* `server-settings.json`
+* `map-gen-settings.json`
+* `map-settings.json`
+* `server-whitelist.json`
+* `server-banlist.json`
+
+Note that since [version 0.14.12][3], several of the options that were provided
 by environment variables have moved to `server-settings.json`.
 
 The RCON password is randomly generated and stored in `/config/rconpw`

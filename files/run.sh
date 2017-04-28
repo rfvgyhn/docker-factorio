@@ -23,11 +23,6 @@ if [[ ! -f $serverSettings ]]; then
     mv /tmp/server-settings.json $serverSettings
 fi
 
-serverWhitelist="/config/server-whitelist.json"
-if [[ ! -f $serverWhitelist ]]; then
-    mv /tmp/server-whitelist.json $serverWhitelist
-fi
-
 saveFile="/saves/$FACTORIO_SAVE_NAME.zip"
 if [[ ! -f $saveFile ]]; then
     factorio --create $saveFile --map-gen-settings $mapGenSettings --map-settings $mapSettings
@@ -38,11 +33,22 @@ params="$params --mod-directory /mods"
 params="$params --rcon-password $password"
 params="$params --rcon-port 27015"
 params="$params --server-settings $serverSettings"
+
 if [[ ! -z "$FACTORIO_PORT" ]]; then
     params = "$params --port $FACTORIO_PORT"
 fi
 if [[ ! -z "$FACTORIO_BIND_ADDRESS" ]]; then
     params = "$params --bind $FACTORIO_BIND_ADDRESS"
+fi
+
+serverWhitelist="/config/server-whitelist.json"
+if [[ ! -z $serverWhitelist ]]; then
+    params = "$params --server-whitelist $serverWhitelist"
+fi
+
+serverBanlist="/config/server-banlist.json"
+if [[ ! -z $serverWhitelist ]]; then
+    params = "$params --server-banlist $serverBanlist"
 fi
 
 exec factorio $params
