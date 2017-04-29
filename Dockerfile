@@ -1,11 +1,11 @@
-FROM frolvlad/alpine-glibc:alpine-3.4
+FROM frolvlad/alpine-glibc:alpine-3.5
 
 MAINTAINER rfvgyhn
 
 RUN apk --no-cache add tini
 ENTRYPOINT ["/sbin/tini", "--"]
 
-ENV VERSION=0.15.3
+ENV VERSION=0.15.4
 RUN apk --no-cache add curl pwgen
 RUN mkdir -p /opt /saves
 RUN curl -LSs https://www.factorio.com/get-download/${VERSION}/headless/linux64 | tar -xJC /opt
