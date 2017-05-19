@@ -1,6 +1,6 @@
 # Factorio Docker
 
-[Factorio][0] headless server - v0.15.10-experimental
+[Factorio][0] headless server - v0.15.11-experimental
 
 ## Usage
 
@@ -33,6 +33,7 @@ the var isn't specified.
 * `FACTORIO_SAVE_NAME=meeseeks` the name of the save file in `/saves`
 * `FACTORIO_PORT=` network port to use
 * `FACTORIO_BIND_ADDRESS=` IP address (and optionally port) to bind to (`address[:port]`)
+* `FACTORIO_SERVER_ID=` Custom path to the server ID file
 
 ```
 docker run -d --name factorio \

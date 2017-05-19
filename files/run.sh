@@ -40,6 +40,9 @@ fi
 if [[ ! -z "$FACTORIO_BIND_ADDRESS" ]]; then
     params = "$params --bind $FACTORIO_BIND_ADDRESS"
 fi
+if [[ ! -z "$FACTORIO_SERVER_ID" ]]; then
+    params = "$params --server-id $FACTORIO_SERVER_ID"
+fi
 
 serverWhitelist="/config/server-whitelist.json"
 if [[ ! -z $serverWhitelist ]]; then
