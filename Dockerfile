@@ -5,7 +5,7 @@ MAINTAINER rfvgyhn
 RUN apk --no-cache add tini
 ENTRYPOINT ["/sbin/tini", "--"]
 
-ENV VERSION=0.15.18
+ENV VERSION=0.15.19
 RUN apk --no-cache add curl pwgen
 RUN mkdir -p /opt /saves
 RUN curl -LSs https://www.factorio.com/get-download/${VERSION}/headless/linux64 | tar -xJC /opt
@@ -28,5 +28,6 @@ EXPOSE 34197/udp
 ENV FACTORIO_SAVE_NAME=meeseeks
 ENV FACTORIO_PORT=
 ENV FACTORIO_BIND_ADDRESS=
+ENV FACTORIO_SCENARIO=
 
 CMD ["/run.sh"]

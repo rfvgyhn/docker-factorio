@@ -43,6 +43,10 @@ fi
 if [[ ! -z "$FACTORIO_SERVER_ID" ]]; then
     params = "$params --server-id $FACTORIO_SERVER_ID"
 fi
+if [[ ! -z "$FACTORIO_SCENARIO" ]]; then
+    params = "$params --start-server-load-scenario $FACTORIO_SCENARIO"
+fi
+
 
 serverWhitelist="/config/server-whitelist.json"
 if [[ ! -z $serverWhitelist ]]; then
