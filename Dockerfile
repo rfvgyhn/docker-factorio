@@ -5,11 +5,7 @@ MAINTAINER rfvgyhn
 RUN apk --no-cache add tini
 ENTRYPOINT ["/sbin/tini", "--"]
 
-<<<<<<< HEAD
-ENV VERSION=0.14.23
-=======
-ENV VERSION=0.15.27
->>>>>>> experimental
+ENV VERSION=0.15.37
 RUN apk --no-cache add curl pwgen
 RUN mkdir -p /opt /saves
 RUN curl -LSs https://www.factorio.com/get-download/${VERSION}/headless/linux64 | tar -xJC /opt
