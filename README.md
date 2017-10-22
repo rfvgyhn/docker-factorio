@@ -1,6 +1,10 @@
 # Factorio Docker
 
+<<<<<<< HEAD
 [Factorio][0] headless server - v0.14.23
+=======
+[Factorio][0] headless server - v0.15.27-experimental
+>>>>>>> experimental
 
 ## Usage
 
@@ -33,6 +37,8 @@ the var isn't specified.
 * `FACTORIO_SAVE_NAME=meeseeks` the name of the save file in `/saves`
 * `FACTORIO_PORT=` network port to use
 * `FACTORIO_BIND_ADDRESS=` IP address (and optionally port) to bind to (`address[:port]`)
+* `FACTORIO_SERVER_ID=` Path where server ID will be stored or read from
+* `FACTORIO_SCENARIO=` [MOD/]NAME (e.g. `base/wave-defense` will load the wave-defense scenario from the base mod)
 
 ```
 docker run -d --name factorio \
@@ -46,8 +52,15 @@ docker run -d --name factorio \
 
 ### Configuration
 
-You may specify `server-settings.json` and `map-gen-settings.json` by mounting the 
-`/config` volume. Note that since [version 0.14.12][3], several of the options that were provided
+You may specify the following files by mounting the `/config` volume:
+
+* `server-settings.json`
+* `map-gen-settings.json`
+* `map-settings.json`
+* `server-whitelist.json`
+* `server-banlist.json`
+
+Note that since [version 0.14.12][3], several of the options that were provided
 by environment variables have moved to `server-settings.json`.
 
 The RCON password is randomly generated and stored in `/config/rconpw`
