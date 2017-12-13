@@ -9,6 +9,7 @@
   "peaceful_mode": false,
   "autoplace_controls":
   {
+    "trees":  {"frequency":  "normal", "size": "normal", "richness": "normal"},
     "coal": {"frequency": "normal", "size": "normal", "richness": "normal"},
     "copper-ore": {"frequency": "normal", "size": "normal", "richness": "normal"},
     "crude-oil": {"frequency": "normal", "size": "normal", "richness": "normal"},
