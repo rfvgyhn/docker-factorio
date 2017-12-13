@@ -1,7 +1,5 @@
 FROM frolvlad/alpine-glibc:alpine-3.5
 
-MAINTAINER rfvgyhn
-
 RUN apk --no-cache add tini
 ENTRYPOINT ["/sbin/tini", "--"]
 
