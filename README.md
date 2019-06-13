@@ -1,6 +1,6 @@
 # Factorio Docker
 
-[Factorio][0] headless server - v0.17.48
+[Factorio][0] headless server - v0.17.49
 
 ## Usage
 
