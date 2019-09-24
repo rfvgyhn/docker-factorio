@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-glibc:alpine-3.5
+FROM frolvlad/alpine-glibc:alpine-3.10
 
 RUN apk --no-cache add tini
 ENTRYPOINT ["/sbin/tini", "--"]
