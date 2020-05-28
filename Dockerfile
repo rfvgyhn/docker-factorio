@@ -3,7 +3,7 @@ FROM frolvlad/alpine-glibc:alpine-3.9
 RUN apk --no-cache add tini
 ENTRYPOINT ["/sbin/tini", "--"]
 
-ENV VERSION=0.18.27
+ENV VERSION=0.18.28
 RUN apk --no-cache add curl pwgen
 RUN mkdir -p /opt /saves
 RUN curl -LSs https://www.factorio.com/get-download/${VERSION}/headless/linux64 | tar -xJC /opt
