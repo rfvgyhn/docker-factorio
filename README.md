@@ -84,8 +84,8 @@ Each version will also have its own tag.
 [4]: https://img.shields.io/docker/stars/rfvgyhn/factorio.svg
 [5]: https://img.shields.io/docker/pulls/rfvgyhn/factorio.svg
 [6]: https://img.shields.io/docker/image-size/rfvgyhn/factorio/latest
-[7]: https://img.shields.io/badge/v-1.1.33-blue
+[7]: https://img.shields.io/badge/v-1.1.110-blue
 [8]: https://img.shields.io/docker/image-size/rfvgyhn/factorio/stable
-[9]: https://img.shields.io/badge/v-1.1.33-blue
+[9]: https://img.shields.io/badge/v-1.1.110-blue
 [10]: https://img.shields.io/docker/image-size/rfvgyhn/factorio/0.18.46-experimental
 [11]: https://img.shields.io/badge/v-0.18.46-blue
