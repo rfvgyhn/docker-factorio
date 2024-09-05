@@ -1,9 +1,12 @@
-FROM frolvlad/alpine-glibc:alpine-3.10
+FROM frolvlad/alpine-glibc:alpine-3
 
 RUN apk --no-cache add tini
 ENTRYPOINT ["/sbin/tini", "--"]
 
-ENV VERSION=1.1.33
+ARG VERSION
+ARG SOURCE
+LABEL org.opencontainers.image.version=$VERSION
+LABEL org.opencontainers.image.source=$SOURCE
 RUN apk --no-cache add curl pwgen
 RUN mkdir -p /opt /saves
 RUN curl -LSs https://www.factorio.com/get-download/${VERSION}/headless/linux64 | tar -xJC /opt
@@ -18,15 +21,19 @@ VOLUME /mods
 VOLUME /config
 
 # RCON
-EXPOSE 27015/udp
+EXPOSE 27015/tcp
 
 # Game
 EXPOSE 34197/udp
-
 
 ENV FACTORIO_SAVE_NAME=meeseeks
 ENV FACTORIO_PORT=
 ENV FACTORIO_BIND_ADDRESS=
 ENV FACTORIO_SCENARIO=
+
+ARG CREATED
+ARG REVISION
+LABEL org.opencontainers.image.created=$CREATED
+LABEL org.opencontainers.image.revision=$REVISION
 
 CMD ["/run.sh"]

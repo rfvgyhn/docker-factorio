@@ -1,6 +1,12 @@
 # Factorio Docker
 
-[Factorio][0] headless server - v1.1.33
+[Factorio][0] headless server
+
+Branch         | Size             | Version          
+---------------|------------------|---------------
+latest         | [![Size][6]][2]  | [![Version][7]][2]
+stable         | [![Size][8]][2]  | [![Version][9]][2]
+experimental   | [![Size][10]][2] | [![Version][11]][2]
 
 ## Usage
 
@@ -75,3 +81,11 @@ Each version will also have its own tag.
 [1]: https://www.factorio.com/download-headless/stable
 [2]: https://www.factorio.com/download-headless/experimental
 [3]: https://forums.factorio.com/viewtopic.php?f=3&t=33591
+[4]: https://img.shields.io/docker/stars/rfvgyhn/factorio.svg
+[5]: https://img.shields.io/docker/pulls/rfvgyhn/factorio.svg
+[6]: https://img.shields.io/docker/image-size/rfvgyhn/factorio/latest
+[7]: https://img.shields.io/badge/v-1.1.33-blue
+[8]: https://img.shields.io/docker/image-size/rfvgyhn/factorio/stable
+[9]: https://img.shields.io/badge/v-1.1.33-blue
+[10]: https://img.shields.io/docker/image-size/rfvgyhn/factorio/0.18.46-experimental
+[11]: https://img.shields.io/badge/v-0.18.46-blue
